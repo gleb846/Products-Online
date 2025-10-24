@@ -1,0 +1,102 @@
+:root{
+  --bg: #f7fbf9;
+  --card: #ffffff;
+  --accent: #2f9e44;
+  --muted: #6b7280;
+  --radius: 12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, #f0fff4 0%, var(--bg) 100%);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:20px;
+}
+
+.register{
+  width:100%;
+  max-width:420px;
+  background:var(--card);
+  padding:28px;
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(16,24,40,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.register h1{
+  margin:0 0 6px;
+  font-size:20px;
+  color:var(--accent);
+}
+
+.register label{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.register input{
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid #e6e9ee;
+  font-size:15px;
+  background:transparent;
+  outline:none;
+}
+
+.register input:focus{
+  border-color:var(--accent);
+  box-shadow:0 6px 18px rgba(47,158,68,0.06);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  border-radius:10px;
+  border:0;
+  font-weight:600;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent), #37b24d);
+  color:white;
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  margin:6px 0;
+}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:#eef2f6;margin:0 12px}
+.divider span{font-size:13px;color:var(--muted)}
+
+.btn.google{
+  border:1px solid #e6e9ee;
+  background: #fff;
+  color:var(--muted);
+  box-shadow:0 6px 18px rgba(16,24,40,0.03);
+}
+.btn.google:hover{
+  box-shadow:0 10px 26px rgba(16,24,40,0.06);
+}
+
+.g-icon{display:inline-block;vertical-align:middle}
+
+@media (max-width:420px){
+  .register{padding:20px}
+}
