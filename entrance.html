@@ -1,11 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вход — Свежие продукты</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="entrance.css">
 </head>
 <body>
-	
+  <div class="page">
+    <aside class="brand">
+      <div class="brand-inner">
+        <div class="logo" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3h2l.4 2M7 13h10l3-8H6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1.6" fill="currentColor" />
+            <circle cx="18" cy="20" r="1.6" fill="currentColor" />
+          </svg>
+        </div>
+        <h1 class="store-name">Свежие продукты</h1>
+        <p class="store-desc">Доставка фермерских и супермаркетных товаров прямо к вашему дому.</p>
+        <ul class="features" aria-hidden="true">
+          <li>🍎 Свежие фрукты и овощи</li>
+          <li>🥖 Хлеб и выпечка каждый день</li>
+          <li>🚚 Быстрая доставка</li>
+        </ul>
+      </div>
+    </aside>
+    <main class="auth">
+      <form class="card" action="#" method="post" aria-labelledby="login-heading">
+        <h2 id="login-heading">Вход в аккаунт</h2>
+        <label for="user">Email или телефон</label>
+        <input id="user" name="user" type="text" inputmode="email" placeholder="name@example.com" required>
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" placeholder="Введите пароль" required>
+        <div class="row">
+          <label class="remember"><input type="checkbox" name="remember"> Запомнить меня</label>
+          <a class="forgot" href="#">Забыли пароль?</a>
+        </div>
+        <button class="btn primary" type="submit">Войти</button>
+        <div class="divider"><span>или</span></div>
+        <button class="btn alt" type="button" aria-label="Вход через Яндекс">Войти через Яндекс</button>
+        <p class="signup">Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+      </form>
+      <p class="legal">Нажимая «Войти», вы принимаете условия обслуживания и политику конфиденциальности.</p>
+    </main>
+  </div>
+  <footer class="footer">© <span id="year"></span> Свежие продукты — доставка продуктов</footer>
 </body>
 </html>
